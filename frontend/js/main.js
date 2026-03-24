@@ -1,7 +1,7 @@
-// URL del backend — cambiá esto por tu URL de Render en producción
+// URL del backend — cambia esto por tu URL de Render en producción
 const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
   ? 'http://localhost:8000'
-  : 'https://lol-elo-guesser-api.onrender.com'; // ← reemplazar con tu URL de Render
+  : 'https://lol-elo-guesser.onrender.com';
 
 // Pre-llenar si viene de profile.html con query params
 const urlParams = new URLSearchParams(window.location.search);
@@ -37,13 +37,13 @@ form.addEventListener('submit', async (e) => {
 
   const raw = riotId.value.trim();
   if (!raw.includes('#')) {
-    showError('Ingresá tu Riot ID completo: Nombre#TAG (ej: Faker#KR1)');
+    showError('Ingresa tu Riot ID completo: Nombre#TAG (ej: Faker#KR1)');
     return;
   }
 
   const [gameName, tagLine] = raw.split('#');
   if (!gameName || !tagLine) {
-    showError('Formato inválido. Usá: Nombre#TAG');
+    showError('Formato inválido. Usa: Nombre#TAG');
     return;
   }
 
@@ -56,7 +56,7 @@ form.addEventListener('submit', async (e) => {
     const data = await resp.json();
 
     if (!resp.ok) {
-      showError(data.detail || 'Error desconocido. Revisá el Riot ID e intentá de nuevo.');
+      showError(data.detail || 'Error desconocido. Revisa el Riot ID e intenta de nuevo.');
       return;
     }
 
@@ -65,7 +65,7 @@ form.addEventListener('submit', async (e) => {
     window.location.href = 'game.html';
 
   } catch (err) {
-    showError('No se pudo conectar con el servidor. Intentá de nuevo en unos segundos.');
+    showError('No se pudo conectar con el servidor. Intenta de nuevo en unos segundos.');
   }
 });
 
@@ -81,7 +81,7 @@ document.getElementById('triviaBtn').addEventListener('click', () => {
   hideError();
   const parsed = parseRiotId();
   if (!parsed) {
-    showError('Ingresá tu Riot ID primero: Nombre#TAG');
+    showError('Ingresa tu Riot ID primero: Nombre#TAG');
     return;
   }
   const { gameName, tagLine } = parsed;
@@ -93,7 +93,7 @@ document.getElementById('profileBtn').addEventListener('click', () => {
   hideError();
   const parsed = parseRiotId();
   if (!parsed) {
-    showError('Ingresá tu Riot ID primero: Nombre#TAG');
+    showError('Ingresa tu Riot ID primero: Nombre#TAG');
     return;
   }
   const { gameName, tagLine } = parsed;

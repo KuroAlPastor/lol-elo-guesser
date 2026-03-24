@@ -1,6 +1,6 @@
 const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
   ? 'http://localhost:8000'
-  : 'https://lol-elo-guesser-api.onrender.com';
+  : 'https://lol-elo-guesser.onrender.com';
 
 const DDRAGON_VERSION = '15.1.1';
 const POINTS_CORRECT = 1000;

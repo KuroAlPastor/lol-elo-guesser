@@ -1,6 +1,6 @@
 const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
   ? 'http://localhost:8000'
-  : 'https://lol-elo-guesser-api.onrender.com';
+  : 'https://lol-elo-guesser.onrender.com';
 
 const DDRAGON_VERSION = '15.1.1';
 
@@ -108,7 +108,7 @@ window.addEventListener('DOMContentLoaded', async () => {
   }
 
   if (!gameName || !tagLine) {
-    showError('Faltan datos del jugador. Volvé a la página principal.');
+    showError('Faltan datos del jugador. Vuelve a la página principal.');
     return;
   }
 
