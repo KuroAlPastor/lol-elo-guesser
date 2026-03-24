@@ -1,0 +1,37 @@
+<svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ears -->
+  <polygon points="16,38 8,14 28,28" fill="#C49A6C"/>
+  <polygon points="17,36 11,17 26,28" fill="#F2A0BC"/>
+  <polygon points="64,38 72,14 52,28" fill="#C49A6C"/>
+  <polygon points="63,36 69,17 54,28" fill="#F2A0BC"/>
+  <!-- Head -->
+  <ellipse cx="40" cy="43" rx="25" ry="20" fill="#C49A6C"/>
+  <!-- Raccoon mask -->
+  <ellipse cx="28" cy="41" rx="11" ry="9" fill="#3D2010"/>
+  <rect x="34" y="34" width="12" height="8" fill="#3D2010"/>
+  <ellipse cx="52" cy="41" rx="11" ry="9" fill="#3D2010"/>
+  <!-- Muzzle -->
+  <ellipse cx="40" cy="52" rx="10" ry="7.5" fill="#F5E6C0"/>
+  <!-- Eye patch -->
+  <ellipse cx="28" cy="41" rx="7.5" ry="6" fill="#100500"/>
+  <path d="M 20,35 Q 28,30 36,35" stroke="#100500" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Right eye (wide, curious - looking toward magnifying glass) -->
+  <ellipse cx="52" cy="40" rx="8" ry="7" fill="white"/>
+  <circle cx="50" cy="41" r="4" fill="#100500"/>
+  <circle cx="51" cy="39" r="1.4" fill="white"/>
+  <!-- Nose -->
+  <ellipse cx="40" cy="48" rx="3" ry="2.2" fill="#3D2010"/>
+  <!-- Mouth (slight determined smile) -->
+  <path d="M 36,55 Q 40,58 44,55" stroke="#3D2010" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Cheeks -->
+  <ellipse cx="19" cy="48" rx="5" ry="3" fill="#F2A0BC" opacity="0.35"/>
+  <ellipse cx="61" cy="48" rx="5" ry="3" fill="#F2A0BC" opacity="0.35"/>
+  <!-- Magnifying glass handle -->
+  <line x1="52" y1="68" x2="66" y2="78" stroke="#8B6420" stroke-width="4" stroke-linecap="round"/>
+  <!-- Magnifying glass ring -->
+  <circle cx="44" cy="63" r="11" stroke="#C89B3C" stroke-width="3.5" fill="none"/>
+  <!-- Lens tint -->
+  <circle cx="44" cy="63" r="8" fill="#C89B3C" opacity="0.12"/>
+  <!-- Lens shine -->
+  <path d="M 38,58 Q 41,56 44,58" stroke="white" stroke-width="1.2" fill="none" stroke-linecap="round" opacity="0.6"/>
+</svg>

@@ -1,0 +1,45 @@
+<svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ears -->
+  <polygon points="16,38 8,14 28,28" fill="#C49A6C"/>
+  <polygon points="17,36 11,17 26,28" fill="#F2A0BC"/>
+  <polygon points="64,38 72,14 52,28" fill="#C49A6C"/>
+  <polygon points="63,36 69,17 54,28" fill="#F2A0BC"/>
+  <!-- Head -->
+  <ellipse cx="40" cy="43" rx="25" ry="20" fill="#C49A6C"/>
+  <!-- Raccoon mask -->
+  <ellipse cx="28" cy="41" rx="11" ry="9" fill="#3D2010"/>
+  <rect x="34" y="34" width="12" height="8" fill="#3D2010"/>
+  <ellipse cx="52" cy="41" rx="11" ry="9" fill="#3D2010"/>
+  <!-- Muzzle -->
+  <ellipse cx="40" cy="52" rx="10" ry="7.5" fill="#F5E6C0"/>
+  <!-- Eye patch -->
+  <ellipse cx="28" cy="41" rx="7.5" ry="6" fill="#100500"/>
+  <path d="M 20,35 Q 28,30 36,35" stroke="#100500" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Right eye (looking down at book) -->
+  <ellipse cx="52" cy="41" rx="7" ry="5.5" fill="white"/>
+  <!-- Eyelid (looking down) -->
+  <path d="M 45,41 Q 52,44 59,41 L 59,43 Q 52,46 45,43 Z" fill="#3D2010"/>
+  <circle cx="52" cy="43" r="3" fill="#100500"/>
+  <circle cx="53.5" cy="41.5" r="1" fill="white"/>
+  <!-- Nose -->
+  <ellipse cx="40" cy="48" rx="3" ry="2.2" fill="#3D2010"/>
+  <!-- Focused mouth (straight line, concentrated) -->
+  <path d="M 36,55 L 44,55" stroke="#3D2010" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Cheeks -->
+  <ellipse cx="19" cy="48" rx="5" ry="3" fill="#F2A0BC" opacity="0.3"/>
+  <ellipse cx="61" cy="48" rx="5" ry="3" fill="#F2A0BC" opacity="0.3"/>
+  <!-- Open book (left page) -->
+  <path d="M 10,70 Q 12,62 40,64 L 40,78 Q 12,76 10,70 Z" fill="#F5E6C0" stroke="#C89B3C" stroke-width="1.5"/>
+  <!-- Open book (right page) -->
+  <path d="M 70,70 Q 68,62 40,64 L 40,78 Q 68,76 70,70 Z" fill="#F5E6C0" stroke="#C89B3C" stroke-width="1.5"/>
+  <!-- Spine -->
+  <line x1="40" y1="64" x2="40" y2="78" stroke="#C89B3C" stroke-width="2"/>
+  <!-- Left page text lines -->
+  <line x1="16" y1="68" x2="36" y2="67" stroke="#C49A6C" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+  <line x1="15" y1="71" x2="36" y2="70" stroke="#C49A6C" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+  <line x1="14" y1="74" x2="35" y2="73" stroke="#C49A6C" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+  <!-- Right page text lines -->
+  <line x1="44" y1="67" x2="64" y2="68" stroke="#C49A6C" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+  <line x1="44" y1="70" x2="65" y2="71" stroke="#C49A6C" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+  <line x1="44" y1="73" x2="66" y2="74" stroke="#C49A6C" stroke-width="1" stroke-linecap="round" opacity="0.6"/>
+</svg>

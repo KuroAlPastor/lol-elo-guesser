@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trivia de tu cuenta — AdivinaELO</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="site-mini-header">
+  <img src="img/logo.svg" class="site-logo-mini" alt="AdivinaELO">
+</div>
+
+<main class="container" id="app">
+
+  <!-- Loader -->
+  <div class="loader show" id="initLoader">
+    <div class="spinner"></div>
+    <div>Analizando tu historial...</div>
+    <div class="loader-note">Revisando tus últimas 50 partidas</div>
+  </div>
+
+  <!-- Pantalla de juego trivia -->
+  <div id="triviaScreen" style="display:none">
+
+    <!-- Banner jugador -->
+    <div class="player-banner">
+      <div>
+        <div class="player-name" id="playerName">—</div>
+        <div class="player-rank" id="playerRank">—</div>
+      </div>
+      <div class="score-display">
+        <div class="score-num" id="scoreNum">0</div>
+        <div class="score-label">puntos</div>
+      </div>
+    </div>
+
+    <!-- Círculos de progreso -->
+    <div class="progress-circles" id="progressCircles"></div>
+
+    <!-- Barra de progreso -->
+    <div class="progress-wrap">
+      <div class="progress-label">
+        <span>Pregunta <span id="qNum">1</span> de <span id="qTotal">8</span></span>
+        <span id="progressPct">0%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+    </div>
+
+    <!-- Tarjeta de pregunta trivia -->
+    <div class="question-card animate-in" id="triviaCard">
+      <div class="trivia-header">
+        <img class="trivia-raccoon raccoon-bob" id="triviaRaccoonQ" src="img/raccoon-spy.svg" alt="">
+        <div class="trivia-question" id="triviaQuestion">—</div>
+      </div>
+
+      <!-- Comodines -->
+      <div class="wildcard-section" id="wildcardSection">
+        <button class="wildcard-btn" id="wc50btn" title="Eliminar 2 respuestas incorrectas">
+          <img src="img/raccoon-spy.svg" class="hint-raccoon" alt="">
+          50/50
+        </button>
+        <button class="wildcard-btn" id="wcHintBtn" title="Pista emoji">
+          <img src="img/raccoon-date.svg" class="hint-raccoon" alt="">
+          Pista
+        </button>
+        <div class="wildcard-hint" id="wildcardHintReveal" style="display:none"></div>
+      </div>
+
+      <!-- Opciones de respuesta -->
+      <div class="trivia-options" id="triviaOptions"></div>
+
+      <!-- Feedback post-respuesta -->
+      <div class="trivia-feedback" id="triviaFeedback" style="display:none">
+        <img class="feedback-raccoon" id="triviaRaccoon" src="" alt="mapache"/>
+        <div class="trivia-fact" id="triviaFact"></div>
+        <button class="btn" id="triviaNextBtn">Siguiente →</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Pantalla de resultados -->
+  <div class="results-screen" id="resultsScreen">
+    <div class="grade-display card">
+      <img class="grade-raccoon" id="gradeRaccoon" src="img/raccoon-happy.svg" alt="mapache"/>
+      <div class="grade-letter" id="gradeLetter">S</div>
+      <div class="grade-score" id="gradeScore">0</div>
+      <div class="grade-label">puntos</div>
+    </div>
+
+    <div class="card" style="margin-top:1rem">
+      <ul class="results-list" id="resultsList"></ul>
+    </div>
+
+    <div class="results-actions">
+      <button class="btn btn-secondary" id="shareBtn">Compartir resultado</button>
+      <button class="btn" id="playAgainBtn">Jugar de nuevo</button>
+    </div>
+  </div>
+
+</main>
+
+<!-- Botón oculto API Key -->
+<button id="apiKeyBtn" class="apikey-fab" title="Configurar API Key"><img src="img/raccoon-spy.svg" alt="API Key" style="width:18px;height:18px"></button>
+<div id="apiKeyOverlay" class="apikey-overlay"></div>
+<div id="apiKeyModal" class="apikey-modal">
+  <div class="apikey-modal-title">API Key de Riot</div>
+  <div class="apikey-modal-desc">Si tenés tu propia clave de desarrollador, podés ingresarla aquí. Se guarda solo en tu navegador y se usa en lugar de la del servidor.</div>
+  <input type="text" id="apiKeyInput" class="apikey-input" placeholder="RGAPI-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" spellcheck="false" autocomplete="off" />
+  <div id="apiKeyStatus" class="apikey-status"></div>
+  <div class="apikey-actions">
+    <button id="apiKeyClear" class="btn btn-secondary">Limpiar</button>
+    <button id="apiKeySave" class="btn">Guardar</button>
+  </div>
+</div>
+
+<script src="js/apikey.js"></script>
+<script src="js/trivia.js"></script>
+</body>
+</html>

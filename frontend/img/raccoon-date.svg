@@ -1,0 +1,41 @@
+<svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ears -->
+  <polygon points="16,38 8,14 28,28" fill="#C49A6C"/>
+  <polygon points="17,36 11,17 26,28" fill="#F2A0BC"/>
+  <polygon points="64,38 72,14 52,28" fill="#C49A6C"/>
+  <polygon points="63,36 69,17 54,28" fill="#F2A0BC"/>
+  <!-- Head -->
+  <ellipse cx="40" cy="43" rx="25" ry="20" fill="#C49A6C"/>
+  <!-- Raccoon mask -->
+  <ellipse cx="28" cy="41" rx="11" ry="9" fill="#3D2010"/>
+  <rect x="34" y="34" width="12" height="8" fill="#3D2010"/>
+  <ellipse cx="52" cy="41" rx="11" ry="9" fill="#3D2010"/>
+  <!-- Muzzle -->
+  <ellipse cx="40" cy="52" rx="10" ry="7.5" fill="#F5E6C0"/>
+  <!-- Eye patch -->
+  <ellipse cx="28" cy="41" rx="7.5" ry="6" fill="#100500"/>
+  <path d="M 20,35 Q 28,30 36,35" stroke="#100500" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Right eye (alert) -->
+  <ellipse cx="52" cy="41" rx="7" ry="6" fill="white"/>
+  <circle cx="52" cy="41" r="3.5" fill="#100500"/>
+  <circle cx="53.5" cy="39.5" r="1.2" fill="white"/>
+  <!-- Nose -->
+  <ellipse cx="40" cy="48" rx="3" ry="2.2" fill="#3D2010"/>
+  <!-- Mouth (o shape - surprised) -->
+  <ellipse cx="40" cy="55" rx="3.5" ry="2.5" fill="#3D2010"/>
+  <!-- Cheeks -->
+  <ellipse cx="19" cy="48" rx="5" ry="3" fill="#F2A0BC" opacity="0.4"/>
+  <ellipse cx="61" cy="48" rx="5" ry="3" fill="#F2A0BC" opacity="0.4"/>
+  <!-- Calendar body -->
+  <rect x="22" y="62" width="36" height="17" rx="3" fill="#F5E6C0" stroke="#C89B3C" stroke-width="1.5"/>
+  <!-- Calendar header -->
+  <rect x="22" y="62" width="36" height="8" rx="3" fill="#C89B3C"/>
+  <rect x="22" y="66" width="36" height="4" fill="#C89B3C"/>
+  <!-- Calendar rings -->
+  <rect x="30" y="59" width="3" height="6" rx="1.5" fill="#3D2010"/>
+  <rect x="47" y="59" width="3" height="6" rx="1.5" fill="#3D2010"/>
+  <!-- Day grid dots -->
+  <circle cx="31" cy="74" r="1.5" fill="#C89B3C"/>
+  <circle cx="40" cy="74" r="1.5" fill="#C89B3C"/>
+  <circle cx="49" cy="74" r="1.5" fill="#3D2010"/>
+</svg>

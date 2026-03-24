@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adivina tu ELO — Jugando</title>
+  <style>
+    .site-mini-header { display:flex; align-items:center; justify-content:center; padding:1rem 0 0; }
+  </style>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="site-mini-header">
+  <img src="img/logo.svg" class="site-logo-mini" alt="AdivinaELO">
+</div>
+<main class="container" id="app">
+  <!-- Loader inicial mientras se cargan los datos -->
+  <div class="loader show" id="initLoader">
+    <div class="spinner"></div>
+    <div>Cargando partidas...</div>
+  </div>
+
+  <!-- Pantalla principal del juego -->
+  <div id="gameScreen" style="display:none">
+
+    <!-- Banner del jugador -->
+    <div class="player-banner">
+      <div>
+        <div class="player-name" id="playerName">—</div>
+        <div class="player-rank" id="playerRank">—</div>
+      </div>
+      <div class="score-display">
+        <div class="score-num" id="scoreNum">0</div>
+        <div class="score-label">puntos</div>
+      </div>
+    </div>
+
+    <!-- Círculos de progreso -->
+    <div class="progress-circles" id="progressCircles"></div>
+
+    <!-- Barra de progreso -->
+    <div class="progress-wrap">
+      <div class="progress-label">
+        <span>Pregunta <span id="qNum">1</span> de <span id="qTotal">10</span></span>
+        <span id="progressPct">0%</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+    </div>
+
+    <!-- Tarjeta de la pregunta -->
+    <div class="question-card" id="questionCard">
+      <!-- Cabecera con campeón -->
+      <div class="champ-header">
+        <img class="champ-img" id="champImg" src="" alt="" />
+        <div class="champ-info">
+          <div class="champ-name" id="champName">—</div>
+          <div class="champ-meta">
+            <span id="champPos">—</span> &bull;
+            <span id="champDur">—</span> min &bull;
+            <span class="badge" id="champResult">—</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-label">KDA</div>
+          <div class="stat-value" id="statKda">—</div>
+          <div class="stat-sub" id="statKdaRatio">ratio —</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">CS Total</div>
+          <div class="stat-value" id="statCs">—</div>
+          <div class="stat-sub" id="statCsMin">— / min</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">Visión</div>
+          <div class="stat-value" id="statVision">—</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">Daño a Campeones</div>
+          <div class="stat-value" id="statDmg">—</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">Oro Total</div>
+          <div class="stat-value" id="statGold">—</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">Rival de línea</div>
+          <div class="stat-value" id="statOpponent">—</div>
+        </div>
+      </div>
+
+      <!-- Pistas opcionales -->
+      <div class="hint-section" id="hintSection">
+        <button class="hint-btn" id="hintAlliesBtn">
+          <img src="img/raccoon-spy.svg" class="hint-raccoon" alt=""> Ver aliados <span class="hint-cost">cap → 700 pts</span>
+        </button>
+        <button class="hint-btn" id="hintDateBtn">
+          <img src="img/raccoon-date.svg" class="hint-raccoon" alt=""> Ver fecha <span class="hint-cost">cap → 500 pts</span>
+        </button>
+        <div class="hint-reveal" id="hintAlliesReveal" style="display:none"></div>
+        <div class="hint-reveal" id="hintDateReveal" style="display:none"></div>
+      </div>
+
+      <!-- Botones de rango -->
+      <div class="rank-section">
+        <div class="rank-question">¿En qué rango fue jugada esta partida?</div>
+        <div class="rank-grid" id="rankGrid">
+          <button class="rank-btn" data-tier="IRON">Hierro</button>
+          <button class="rank-btn" data-tier="BRONZE">Bronce</button>
+          <button class="rank-btn" data-tier="SILVER">Plata</button>
+          <button class="rank-btn" data-tier="GOLD">Oro</button>
+          <button class="rank-btn" data-tier="PLATINUM">Platino</button>
+          <button class="rank-btn" data-tier="EMERALD">Esmeralda</button>
+          <button class="rank-btn" data-tier="DIAMOND">Diamante</button>
+          <button class="rank-btn" data-tier="MASTER">Master+</button>
+        </div>
+      </div>
+
+      <!-- Feedback post-respuesta -->
+      <div class="feedback" id="feedback">
+        <img class="feedback-raccoon" id="feedbackRaccoon" src="" alt="mapache"/>
+        <div class="feedback-stars" id="feedbackStars"></div>
+        <div class="feedback-title" id="feedbackTitle"></div>
+        <ul class="feedback-hints" id="feedbackHints"></ul>
+        <button class="btn" id="nextBtn">Siguiente pregunta →</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Pantalla de resultados -->
+  <div class="results-screen" id="resultsScreen">
+    <div class="grade-display card">
+      <img class="grade-raccoon" id="gradeRaccoon" src="img/raccoon-happy.svg" alt="mapache"/>
+      <div class="grade-letter" id="gradeLetter">S</div>
+      <div class="grade-score" id="gradeScore">10,000</div>
+      <div class="grade-label">puntos de 10,000</div>
+    </div>
+
+    <div class="card" style="margin-top: 1rem;">
+      <ul class="results-list" id="resultsList"></ul>
+    </div>
+
+    <div class="results-actions">
+      <button class="btn btn-secondary" id="shareBtn">Compartir resultado</button>
+      <button class="btn" id="playAgainBtn">Jugar de nuevo</button>
+    </div>
+  </div>
+
+</main>
+
+<!-- Botón oculto API Key -->
+<button id="apiKeyBtn" class="apikey-fab" title="Configurar API Key"><img src="img/raccoon-spy.svg" alt="API Key" style="width:18px;height:18px"></button>
+<div id="apiKeyOverlay" class="apikey-overlay"></div>
+<div id="apiKeyModal" class="apikey-modal">
+  <div class="apikey-modal-title">API Key de Riot</div>
+  <div class="apikey-modal-desc">Si tenés tu propia clave de desarrollador, podés ingresarla aquí. Se guarda solo en tu navegador y se usa en lugar de la del servidor.</div>
+  <input type="text" id="apiKeyInput" class="apikey-input" placeholder="RGAPI-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" spellcheck="false" autocomplete="off" />
+  <div id="apiKeyStatus" class="apikey-status"></div>
+  <div class="apikey-actions">
+    <button id="apiKeyClear" class="btn btn-secondary">Limpiar</button>
+    <button id="apiKeySave" class="btn">Guardar</button>
+  </div>
+</div>
+
+<script src="js/apikey.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>

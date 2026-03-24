@@ -1,0 +1,77 @@
+<svg viewBox="0 0 224 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F0E6C8"/>
+      <stop offset="60%" stop-color="#C89B3C"/>
+      <stop offset="100%" stop-color="#9B7520"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- === Diamond badge === -->
+  <!-- Outer halo -->
+  <polygon points="34,1 67,34 34,67 1,34" fill="none" stroke="#C89B3C" stroke-width="0.7" opacity="0.25"/>
+  <!-- Main diamond -->
+  <polygon points="34,5 63,34 34,63 5,34" fill="#0a0e1a" stroke="#C89B3C" stroke-width="2.2"/>
+  <!-- Inner diamond detail lines -->
+  <polygon points="34,10 58,34 34,58 10,34" fill="none" stroke="#C89B3C" stroke-width="0.5" opacity="0.35"/>
+  <!-- Corner gold dots -->
+  <circle cx="34" cy="5"  r="2.2" fill="#C89B3C"/>
+  <circle cx="63" cy="34" r="2.2" fill="#C89B3C"/>
+  <circle cx="34" cy="63" r="2.2" fill="#C89B3C"/>
+  <circle cx="5"  cy="34" r="2.2" fill="#C89B3C"/>
+
+  <!-- === Mini raccoon inside diamond === -->
+  <!-- Ears -->
+  <polygon points="22,30 17,17 27,25" fill="#C49A6C"/>
+  <polygon points="23,28 19,19 26,25" fill="#F2A0BC"/>
+  <polygon points="46,30 51,17 41,25" fill="#C49A6C"/>
+  <polygon points="45,28 49,19 42,25" fill="#F2A0BC"/>
+  <!-- Head -->
+  <ellipse cx="34" cy="35" rx="13" ry="11" fill="#C49A6C"/>
+  <!-- Raccoon mask -->
+  <ellipse cx="27" cy="33" rx="6.5" ry="5.5" fill="#3D2010"/>
+  <rect x="31" y="29" width="6" height="5.5" fill="#3D2010"/>
+  <ellipse cx="41" cy="33" rx="6.5" ry="5.5" fill="#3D2010"/>
+  <!-- Muzzle -->
+  <ellipse cx="34" cy="41.5" rx="6" ry="4.5" fill="#F5E6C0"/>
+  <!-- Eye patch -->
+  <ellipse cx="27" cy="33" rx="4.5" ry="3.8" fill="#100500"/>
+  <path d="M 21,28 Q 27,24 33,28" stroke="#100500" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <!-- Right eye -->
+  <ellipse cx="41" cy="33" rx="4" ry="3.2" fill="white"/>
+  <circle cx="41.5" cy="33" r="2" fill="#100500"/>
+  <circle cx="42.4" cy="32" r="0.7" fill="white"/>
+  <!-- Nose -->
+  <ellipse cx="34" cy="39" rx="1.7" ry="1.2" fill="#3D2010"/>
+  <!-- Mouth -->
+  <path d="M 30,44 Q 34,47 38,44" stroke="#3D2010" stroke-width="1" fill="none" stroke-linecap="round"/>
+  <!-- Cheeks -->
+  <ellipse cx="21" cy="39" rx="3" ry="2" fill="#F2A0BC" opacity="0.45"/>
+  <ellipse cx="47" cy="39" rx="3" ry="2" fill="#F2A0BC" opacity="0.45"/>
+
+  <!-- === Text === -->
+  <!-- "Adivina" small label -->
+  <text x="77" y="30"
+    font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
+    font-size="13.5"
+    font-weight="500"
+    letter-spacing="2.5"
+    fill="#D4B97A"
+    opacity="0.9">ADIVINA</text>
+
+  <!-- "ELO" large bold -->
+  <text x="75" y="60"
+    font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
+    font-size="36"
+    font-weight="800"
+    letter-spacing="-1"
+    fill="url(#goldGrad)"
+    filter="url(#glow)">ELO</text>
+
+  <!-- Decorative line between texts -->
+  <line x1="77" y1="35" x2="134" y2="35" stroke="#C89B3C" stroke-width="0.8" opacity="0.4"/>
+</svg>

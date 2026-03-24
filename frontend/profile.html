@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Perfil — AdivinaELO</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <img src="img/logo.svg" class="site-logo raccoon-float" alt="AdivinaELO">
+</header>
+
+<main class="container">
+
+  <!-- Loader -->
+  <div class="loader show" id="loader">
+    <div class="spinner"></div>
+    <div>Cargando tu perfil...</div>
+    <div class="loader-note">La primera carga puede tardar hasta 30 segundos</div>
+  </div>
+
+  <!-- Error -->
+  <div class="msg error" id="errorMsg"></div>
+
+  <!-- Contenido del perfil -->
+  <div id="profileContent" style="display:none">
+
+    <!-- Volver -->
+    <div class="nav-back" onclick="history.back()">← Volver</div>
+
+    <!-- Banner jugador -->
+    <div class="player-banner" id="playerBanner">
+      <div>
+        <div class="player-name" id="playerName">—</div>
+        <div class="player-rank" id="playerRank">—</div>
+      </div>
+    </div>
+
+    <!-- Mains recientes -->
+    <div class="section-title">
+      Mains recientes
+      <span class="section-sub">(últimas 4 semanas)</span>
+    </div>
+    <div class="champ-list" id="recentMains"></div>
+    <p class="text-dim" id="noRecent" style="display:none">Sin partidas registradas en las últimas 4 semanas.</p>
+
+    <!-- Mains históricos -->
+    <div class="section-title">
+      Mains históricos
+      <span class="section-sub">(maestría total)</span>
+    </div>
+    <div class="champ-list" id="historicalMains"></div>
+    <p class="text-dim" id="noHistorical" style="display:none">Sin historial registrado.</p>
+
+    <!-- Escaladores -->
+    <div class="section-title" id="escalaTitle" style="display:none">
+      Escaladores
+      <span class="section-sub">(últimas 4 semanas, mín. 3 partidas)</span>
+    </div>
+    <div class="escala-sub" id="escalaSoloLabel" style="display:none">Solo/Duo</div>
+    <div class="champ-list" id="escalaSoloList"></div>
+    <div class="escala-sub" id="escalaFlexLabel" style="display:none">Flexible</div>
+    <div class="champ-list" id="escalaFlexList"></div>
+
+    <!-- Libros -->
+    <div class="books-card card animate-count" id="booksCard">
+      <img src="img/raccoon-read.svg" class="books-raccoon raccoon-bob" alt="mapache leyendo"/>
+      <div class="books-count" id="booksCount">0</div>
+      <div class="books-label">libros podrías haber leído</div>
+      <div class="books-ref" id="booksRef"></div>
+      <div class="books-sub">
+        en lugar de acumular <span id="totalPoints">0</span> pts de maestría
+      </div>
+    </div>
+
+    <!-- Botón de jugar -->
+    <div style="margin-top: 1rem;">
+      <button class="btn" id="playBtn">Jugar AdivinaELO</button>
+    </div>
+
+  </div>
+</main>
+
+<!-- Botón oculto API Key -->
+<button id="apiKeyBtn" class="apikey-fab" title="Configurar API Key"><img src="img/raccoon-spy.svg" alt="API Key" style="width:18px;height:18px"></button>
+<div id="apiKeyOverlay" class="apikey-overlay"></div>
+<div id="apiKeyModal" class="apikey-modal">
+  <div class="apikey-modal-title">API Key de Riot</div>
+  <div class="apikey-modal-desc">Si tenés tu propia clave de desarrollador, podés ingresarla aquí. Se guarda solo en tu navegador y se usa en lugar de la del servidor.</div>
+  <input type="text" id="apiKeyInput" class="apikey-input" placeholder="RGAPI-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" spellcheck="false" autocomplete="off" />
+  <div id="apiKeyStatus" class="apikey-status"></div>
+  <div class="apikey-actions">
+    <button id="apiKeyClear" class="btn btn-secondary">Limpiar</button>
+    <button id="apiKeySave" class="btn">Guardar</button>
+  </div>
+</div>
+
+<script src="js/apikey.js"></script>
+<script src="js/profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adivina tu ELO — League of Legends</title>
+  <meta name="description" content="¿Podés adivinar el ELO de estas partidas? Ingresá tu Riot ID y poné a prueba tu lectura del meta." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <img src="img/logo.svg" class="site-logo raccoon-float" alt="AdivinaELO">
+  <p class="subtitle">¿Podés adivinar el rango de estas partidas?</p>
+</header>
+
+<main class="container">
+  <div class="card">
+    <form class="search-form" id="searchForm" autocomplete="off">
+      <div class="input-row">
+        <input
+          type="text"
+          id="riotId"
+          placeholder="TuNombre#LAN"
+          required
+          spellcheck="false"
+        />
+        <select id="region">
+          <option value="la1">LAN</option>
+          <option value="la2">LAS</option>
+          <option value="na1">NA</option>
+          <option value="br1">BR</option>
+          <option value="euw1">EUW</option>
+          <option value="eune1">EUNE</option>
+          <option value="kr">KR</option>
+          <option value="jp1">JP</option>
+        </select>
+      </div>
+      <button type="submit" class="btn" id="playBtn">Adivinar mi ELO</button>
+      <button type="button" class="btn btn-secondary" id="triviaBtn">Preguntas de mi cuenta</button>
+      <button type="button" class="btn btn-secondary" id="profileBtn">Ver mi perfil</button>
+    </form>
+
+    <div class="msg error" id="errorMsg"></div>
+    <div class="loader" id="loader">
+      <div class="spinner"></div>
+      <div>Analizando tus partidas...</div>
+      <div class="loader-note">La primera carga puede tardar hasta 30 segundos</div>
+    </div>
+  </div>
+
+  <div class="how-to">
+    <h3>¿Cómo se juega?</h3>
+    <ol>
+      <li>Ingresá tu Riot ID (ej: PlayerName#LAN)</li>
+      <li>Te mostramos stats de partidas reales de distintos rangos</li>
+      <li>Adiviná en qué rango fue jugada cada partida</li>
+      <li>¡Sumá puntos y descubrí qué tan bien leés el meta!</li>
+    </ol>
+  </div>
+</main>
+
+<!-- Botón oculto API Key -->
+<button id="apiKeyBtn" class="apikey-fab" title="Configurar API Key"><img src="img/raccoon-spy.svg" alt="API Key" style="width:18px;height:18px"></button>
+<div id="apiKeyOverlay" class="apikey-overlay"></div>
+<div id="apiKeyModal" class="apikey-modal">
+  <div class="apikey-modal-title">API Key de Riot</div>
+  <div class="apikey-modal-desc">Si tenés tu propia clave de desarrollador, podés ingresarla aquí. Se guarda solo en tu navegador y se usa en lugar de la del servidor.</div>
+  <input type="text" id="apiKeyInput" class="apikey-input" placeholder="RGAPI-xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" spellcheck="false" autocomplete="off" />
+  <div id="apiKeyStatus" class="apikey-status"></div>
+  <div class="apikey-actions">
+    <button id="apiKeyClear" class="btn btn-secondary">Limpiar</button>
+    <button id="apiKeySave" class="btn">Guardar</button>
+  </div>
+</div>
+
+<script src="js/apikey.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

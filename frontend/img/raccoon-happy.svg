@@ -1,0 +1,30 @@
+<svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ears -->
+  <polygon points="16,42 8,17 28,32" fill="#C49A6C"/>
+  <polygon points="17,40 11,20 26,32" fill="#F2A0BC"/>
+  <polygon points="64,42 72,17 52,32" fill="#C49A6C"/>
+  <polygon points="63,40 69,20 54,32" fill="#F2A0BC"/>
+  <!-- Head -->
+  <ellipse cx="40" cy="48" rx="25" ry="20" fill="#C49A6C"/>
+  <!-- Raccoon mask -->
+  <ellipse cx="28" cy="46" rx="11" ry="9" fill="#3D2010"/>
+  <rect x="34" y="39" width="12" height="8" fill="#3D2010"/>
+  <ellipse cx="52" cy="46" rx="11" ry="9" fill="#3D2010"/>
+  <!-- Muzzle -->
+  <ellipse cx="40" cy="57" rx="10" ry="7.5" fill="#F5E6C0"/>
+  <!-- Eye patch -->
+  <ellipse cx="28" cy="46" rx="7.5" ry="6" fill="#100500"/>
+  <path d="M 20,40 Q 28,35 36,40" stroke="#100500" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Right eye (happy closed arc) -->
+  <path d="M 45,49 Q 52,42 59,49" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <circle cx="56" cy="44" r="1.2" fill="white" opacity="0.7"/>
+  <!-- Nose -->
+  <ellipse cx="40" cy="53" rx="3" ry="2.2" fill="#3D2010"/>
+  <!-- Big smile -->
+  <path d="M 32,59 Q 40,68 48,59" stroke="#3D2010" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Cheeks pronounced -->
+  <ellipse cx="19" cy="52" rx="6" ry="4" fill="#F2A0BC" opacity="0.65"/>
+  <ellipse cx="61" cy="52" rx="6" ry="4" fill="#F2A0BC" opacity="0.65"/>
+  <!-- Sparkle top right -->
+  <path d="M 66,18 L 67,14 L 68,18 L 72,19 L 68,20 L 67,24 L 66,20 L 62,19 Z" fill="#C89B3C" opacity="0.85"/>
+</svg>

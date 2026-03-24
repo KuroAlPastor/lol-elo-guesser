@@ -1,0 +1,32 @@
+<svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ears (slightly drooped) -->
+  <polygon points="16,44 10,19 28,34" fill="#C49A6C"/>
+  <polygon points="17,42 13,22 26,34" fill="#F2A0BC"/>
+  <polygon points="64,44 70,19 52,34" fill="#C49A6C"/>
+  <polygon points="63,42 67,22 54,34" fill="#F2A0BC"/>
+  <!-- Head -->
+  <ellipse cx="40" cy="48" rx="25" ry="20" fill="#C49A6C"/>
+  <!-- Raccoon mask -->
+  <ellipse cx="28" cy="46" rx="11" ry="9" fill="#3D2010"/>
+  <rect x="34" y="39" width="12" height="8" fill="#3D2010"/>
+  <ellipse cx="52" cy="46" rx="11" ry="9" fill="#3D2010"/>
+  <!-- Muzzle -->
+  <ellipse cx="40" cy="57" rx="10" ry="7.5" fill="#F5E6C0"/>
+  <!-- Eye patch -->
+  <ellipse cx="28" cy="46" rx="7.5" ry="6" fill="#100500"/>
+  <path d="M 20,40 Q 28,35 36,40" stroke="#100500" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <!-- Right eye (sad - pupil looking down) -->
+  <ellipse cx="52" cy="46" rx="7" ry="5.5" fill="white"/>
+  <circle cx="51" cy="48" r="3.5" fill="#100500"/>
+  <circle cx="52.5" cy="46.5" r="1" fill="white"/>
+  <!-- Nose -->
+  <ellipse cx="40" cy="53" rx="3" ry="2.2" fill="#3D2010"/>
+  <!-- Frown -->
+  <path d="M 34,65 Q 40,58 46,65" stroke="#3D2010" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Teardrop from right eye -->
+  <ellipse cx="57" cy="53" rx="2" ry="3" fill="#A8C8E8" opacity="0.75"/>
+  <ellipse cx="57" cy="56" rx="1.5" ry="2" fill="#A8C8E8" opacity="0.5"/>
+  <!-- Cheeks muted -->
+  <ellipse cx="19" cy="53" rx="5" ry="3" fill="#F2A0BC" opacity="0.2"/>
+  <ellipse cx="61" cy="53" rx="5" ry="3" fill="#F2A0BC" opacity="0.2"/>
+</svg>
